@@ -1,6 +1,7 @@
-import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 
 import { CrisisService } from 'app/crisis-center/crisis.service';
 
@@ -14,7 +15,12 @@ import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
     CommonModule,
     CrisisCenterRoutingModule
   ],
-  declarations: [CrisisCenterComponent, CrisisListComponent, CrisisCenterHomeComponent, CrisisDetailComponent],
+  declarations: [
+    CrisisCenterComponent,
+    CrisisListComponent,
+    CrisisCenterHomeComponent,
+    CrisisDetailComponent
+  ],
   providers: [
     CrisisService
   ]
