@@ -6,7 +6,6 @@ import 'rxjs/add/operator/switchMap';
 import { Hero } from '../classes/hero';
 import { HeroService } from '../shared/hero.service';
 
-
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -23,6 +22,7 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
+      // (+) converts string 'id' to a number
       .switchMap((params: Params) => this.heroService.getHero(+params['id']))
       .subscribe(hero => this.hero = hero);
   }
